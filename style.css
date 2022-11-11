@@ -66,9 +66,7 @@ main .🔥 {
 .🔥,
 .🔥::before,
 .🔥::after {
-    --magic-time: 5s;
-    transition: all .3s ease-in-out;
-    animation: 🎞 var(--magic-time) ease-in-out infinite;
+    animation: 🎞 5s ease-in-out infinite;
     background: linear-gradient(
         to right,
         var(--light-pink),
@@ -120,7 +118,7 @@ footer .links a::after {
     font-size: 1.25rem;
     height: .1rem;
     border-radius: 1rem;
-    animation: 🎞 1s ease-in-out infinite;
+    animation: 🎞 5s ease-in-out infinite;
     background: linear-gradient(
         to right,
         var(--light-pink),
@@ -129,6 +127,7 @@ footer .links a::after {
         var(--light-pink)
     );
     text-shadow: 0 0 1rem #ffffff15;
+    background-size: 200%;
     opacity: 0;
 }
 
