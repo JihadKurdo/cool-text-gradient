@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --light-pink: #ff4afc;
+    --orange: #fc5858;
+    --pink: #ed14ad;
+}
+
+::selection {
+    color: var(--pink);
+    background-color: white;
+    text-shadow: 0 0 0 var(--pink);
+}
+
+*,
+::before,
+::after {
+    position: relative;
+    transition: .3s ease-in-out;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    line-height: 1.3;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: poppins;
+    font-weight: bold;
+    color: white;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right bottom, #161616, #111, #0E0E0E, #0D0D0D, #090909);
+    background-color: #111;
+}
+
+main {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .🔥 {
+    font-size: 7vmin;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+@keyframes 🎞 {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.🔥,
+.🔥::before,
+.🔥::after {
+    --magic-time: 5s;
+    transition: all .3s ease-in-out;
+    animation: 🎞 var(--magic-time) ease-in-out infinite;
+    background: linear-gradient(
+        to right,
+        var(--light-pink),
+        var(--orange),
+        var(--pink),
+        var(--light-pink)
+    );
+    background-size: 200%;
+    text-shadow: 0 0 1rem #ffffff15;
+    white-space: nowrap;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+footer .links a {
+    margin: 0 .5rem;
+    padding: 1rem .25rem;
+    padding-bottom: 0;
+    font-size: 1.25rem;
+}
+
+footer .links a i {
+    padding: 0 .25rem;
+}
+
+footer .links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    height: .1rem;
+    border-radius: 1rem;
+    animation: 🎞 1s ease-in-out infinite;
+    background: linear-gradient(
+        to right,
+        var(--light-pink),
+        var(--orange),
+        var(--pink),
+        var(--light-pink)
+    );
+    text-shadow: 0 0 1rem #ffffff15;
+    opacity: 0;
+}
+
+footer .links a:hover::after,
+footer .links a:focus-visible::after {
+    opacity: 1;
+}
+
+footer .links a:hover i,
+footer .links a:focus-visible i {
+    transform: translateY(-25%);
+}
